@@ -1,9 +1,9 @@
 'use client'
 
-import { FormEvent, useState } from 'react'
+import { FormEvent, ReactNode, useState } from 'react'
 import { ArrowUpRight, Check, Mail } from 'lucide-react'
 
-export function ContactCapture() {
+export function ContactCapture({ children }: { children: ReactNode }) {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const [status, setStatus] = useState<'idle' | 'loading' | 'error'>('idle')
@@ -29,8 +29,8 @@ export function ContactCapture() {
 
   return (
     <div className="contact-capture">
-      <p className="capture-label"><Mail size={14} /> Want to connect?</p>
-      <p className="capture-copy">Your email is used only to improve identity matching through the authorized enrichment service. Nothing is saved by this site.</p>
+      <p className="capture-label"><Mail size={14} /> Public context lookup</p>
+      <p className="capture-copy">Enter your email and quickly find your publicly sourced info. The lookup may display your IP address, name, phone, related emails, usernames, public social profiles, images, websites, and workplaces. No results will be saved by this site.</p>
       {submitted ? (
         <p className="capture-success" role="status"><Check size={16} /> Identity matching request received. No email was stored by this site.</p>
       ) : (
@@ -43,6 +43,7 @@ export function ContactCapture() {
           {status === 'error' && <p className="capture-error" role="alert">The matching request could not be completed. Please try again.</p>}
         </form>
       )}
+      {submitted && <div className="intel-results">{children}</div>}
     </div>
   )
 }
