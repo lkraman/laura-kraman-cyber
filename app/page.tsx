@@ -144,7 +144,7 @@ export default async function Page() {
             <div className="timeline">
               <div className="timeline-item current"><span className="timeline-year">2022—now</span><div><h3>Deloitte US <small>Search & AI Strategist</small></h3><p>Advising C-suite and senior leadership while leading enterprise search and AI methodology. Managed a major website migration that delivered 10% organic traffic growth in the first 30 days.</p></div></div>
               <div className="timeline-item"><span className="timeline-year">2020—2022</span><div><h3>Quartz Network <small>SEO Specialist</small></h3><p>Validated data integrity across API and database migration projects, partnered with developers, and turned public-source research into stakeholder recommendations.</p></div></div>
-              <div className="timeline-item"><span className="timeline-year">2018—2020</span><div><h3>Web development <small>MSquared · Whittens</small></h3><p>Built full-stack applications with React, Node.js, and PostgreSQL. Increased organic traffic by 350% through technical optimization and information architecture.</p></div></div>
+              <div className="timeline-item"><span className="timeline-year">2018—2020</span><div><h3>Web development <small>MSquared · Whittens</small></h3><p>Built web applications and improved organic traffic by 350% through technical optimization and information architecture.</p></div></div>
             </div>
           </section>
 
