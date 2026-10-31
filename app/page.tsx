@@ -153,7 +153,6 @@ export default async function Page() {
             <SectionLabel>Get in touch</SectionLabel>
             <h2>Good intelligence<br /><em>starts with a question.</em></h2>
             <a className="email-link" href="mailto:Laurakraman01@gmail.com">Laurakraman01@gmail.com <ArrowUpRight size={20} /></a>
-            <ContactCapture />
             <div className="contact-footer"><span>© 2026 Laura Kraman</span><a href="https://linkedin.com/in/laurakraman" target="_blank" rel="noreferrer">LinkedIn <ExternalLink size={13} /></a></div>
           </section>
         </div>
@@ -171,6 +170,7 @@ export default async function Page() {
               <IntelField icon={<BriefcaseBusiness size={15} />} label="Work" value="Deloitte US · Search & AI Strategist" />
               <IntelField icon={<Globe2 size={15} />} label="Website / social" value="linkedin.com/in/laurakraman" link="https://linkedin.com/in/laurakraman" />
             </div>
+            <ContactCapture />
             <div className="aside-footnote"><span className="lock-mark">⌁</span><span>Only public, user-authorized details should appear here. No IP address or external profiles are invented. The source and authorization key remain server-side.</span></div>
           </div>
         </aside>
