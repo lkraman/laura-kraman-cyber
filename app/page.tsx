@@ -60,19 +60,6 @@ const projects = [
   },
 ]
 
-const skills = [
-  'Penetration testing & vulnerability assessment',
-  'Reconnaissance, OSINT & SOCMINT',
-  'Nmap, Burp Suite & Metasploit',
-  'Network security & IDS/IPS coursework',
-  'Threat actor profiling',
-  'IOC / IOA analysis',
-  'MITRE ATT&CK & Cyber Kill Chain',
-  'Python & data analysis',
-  'Maltego, Shodan & VirusTotal',
-  'AI search vulnerabilities',
-]
-
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <p className="section-label">
@@ -148,11 +135,6 @@ export default async function Page() {
                 </article>
               ))}
             </div>
-          </section>
-
-          <section className="skills-section">
-            <div><SectionLabel>Technical focus</SectionLabel></div>
-            <div className="skills-grid">{skills.map((skill) => <span key={skill}>{skill}</span>)}</div>
           </section>
 
           <section className="experience-section">
