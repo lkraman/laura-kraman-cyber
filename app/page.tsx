@@ -1,3 +1,4 @@
+import { ContactCapture } from '@/components/contact-capture'
 import { getLampyreContext } from '@/lib/lampyre'
 import {
   ArrowUpRight,
@@ -152,6 +153,7 @@ export default async function Page() {
             <SectionLabel>Get in touch</SectionLabel>
             <h2>Good intelligence<br /><em>starts with a question.</em></h2>
             <a className="email-link" href="mailto:Laurakraman01@gmail.com">Laurakraman01@gmail.com <ArrowUpRight size={20} /></a>
+            <ContactCapture />
             <div className="contact-footer"><span>© 2026 Laura Kraman</span><a href="https://linkedin.com/in/laurakraman" target="_blank" rel="noreferrer">LinkedIn <ExternalLink size={13} /></a></div>
           </section>
         </div>
