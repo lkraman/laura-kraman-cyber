@@ -1,18 +1,10 @@
-import { ContactCapture } from '@/components/contact-capture'
 import {
   ArrowUpRight,
-  AtSign,
-  BriefcaseBusiness,
   ChevronRight,
   ExternalLink,
-  Globe2,
-  Mail,
   MapPin,
-  Network,
-  Phone,
   ShieldCheck,
   Terminal,
-  UserRound,
 } from 'lucide-react'
 
 const projects = [
@@ -153,24 +145,6 @@ export default function Page() {
           </section>
         </div>
 
-        <aside className="intel-aside" aria-label="Context enrichment panel">
-          <div className="aside-inner">
-            <div className="aside-heading"><div><span className="live-indicator"><span /> LIVE CONTEXT</span><h2>Context<br /><em>enrichment</em></h2></div><Network size={22} /></div>
-            <p className="aside-note">Public intelligence context is shown here when an authorized source is available.</p>
-            <ContactCapture>
-              <div className="intel-fields">
-                <IntelField icon={<Globe2 size={15} />} label="IP address" value="Not available" />
-                <IntelField icon={<UserRound size={15} />} label="Name" value="Laura Kraman" />
-                <IntelField icon={<Phone size={15} />} label="Phone" value="302-233-6133" />
-                <IntelField icon={<Mail size={15} />} label="Email" value="Laurakraman01@gmail.com" />
-                <IntelField icon={<AtSign size={15} />} label="Username" value="Laurakraman01" />
-                <IntelField icon={<BriefcaseBusiness size={15} />} label="Work" value="Deloitte US · Search & AI Strategist" />
-                <IntelField icon={<Globe2 size={15} />} label="Website / social" value="linkedin.com/in/laurakraman" link="https://linkedin.com/in/laurakraman" />
-              </div>
-            </ContactCapture>
-            <div className="aside-footnote"><span className="lock-mark">⌁</span><span>Only public, user-authorized details should appear here.</span></div>
-          </div>
-        </aside>
       </div>
     </main>
   )
