@@ -1,3 +1,4 @@
+import { getLampyreContext } from '@/lib/lampyre'
 import {
   ArrowUpRight,
   AtSign,
@@ -70,7 +71,9 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   )
 }
 
-export default function Page() {
+export default async function Page() {
+  const lampyre = await getLampyreContext()
+
   return (
     <main className="site-shell">
       <div className="ambient-grid" aria-hidden="true" />
@@ -154,12 +157,11 @@ export default function Page() {
           </section>
         </div>
 
-        <aside className="intel-aside" aria-label="Lampyre enrichment panel">
+        <aside className="intel-aside" aria-label="Context enrichment panel">
           <div className="aside-inner">
-            <div className="aside-heading"><div><span className="live-indicator"><span /> LIVE CONTEXT</span><h2>Lampyre<br /><em>enrichment</em></h2></div><Network size={22} /></div>
-            <p className="aside-note">Public intelligence context is shown here when the Lampyre connector is available.</p>
-            <div className="connector-state"><span className="state-icon"><Search size={14} /></span><div><strong>MCP endpoint noted</strong><span>Awaiting authorized source data</span></div><span className="state-dot" /></div>
-            <a className="mcp-endpoint" href="https://account.lampyre.io/api/v2/mcp" target="_blank" rel="noreferrer"><span>account.lampyre.io/api/v2/mcp</span><ExternalLink size={12} /></a>
+            <div className="aside-heading"><div><span className="live-indicator"><span /> LIVE CONTEXT</span><h2>Context<br /><em>enrichment</em></h2></div><Network size={22} /></div>
+            <p className="aside-note">Public intelligence context is shown here when an authorized source is available.</p>
+            <div className={`connector-state ${lampyre.connected ? 'is-connected' : ''}`}><span className="state-icon"><Search size={14} /></span><div><strong>{lampyre.connected ? 'Source connected' : 'Source unavailable'}</strong><span>{lampyre.connected ? `${lampyre.toolCount} enrichment tools available` : 'Awaiting authorized source data'}</span></div><span className="state-dot" /></div>
             <div className="intel-fields">
               <IntelField icon={<Globe2 size={15} />} label="IP address" value="Not available" />
               <IntelField icon={<UserRound size={15} />} label="Name" value="Laura Kraman" />
@@ -169,7 +171,7 @@ export default function Page() {
               <IntelField icon={<BriefcaseBusiness size={15} />} label="Work" value="Deloitte US · Search & AI Strategist" />
               <IntelField icon={<Globe2 size={15} />} label="Website / social" value="linkedin.com/in/laurakraman" link="https://linkedin.com/in/laurakraman" />
             </div>
-            <div className="aside-footnote"><span className="lock-mark">⌁</span><span>Only public, user-authorized details should appear here. No IP address or external profiles are invented.</span></div>
+            <div className="aside-footnote"><span className="lock-mark">⌁</span><span>Only public, user-authorized details should appear here. No IP address or external profiles are invented. The source and authorization key remain server-side.</span></div>
           </div>
         </aside>
       </div>
