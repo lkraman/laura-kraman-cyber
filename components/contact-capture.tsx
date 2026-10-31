@@ -30,7 +30,7 @@ export function ContactCapture() {
   return (
     <div className="contact-capture">
       <p className="capture-label"><Mail size={14} /> Want to connect?</p>
-      <p className="capture-copy">Your email is used only to improve identity matching through the authorized enrichment service. It is not stored by this site.</p>
+      <p className="capture-copy">Your email is used only to improve identity matching through the authorized enrichment service. Nothing is saved by this site.</p>
       {submitted ? (
         <p className="capture-success" role="status"><Check size={16} /> Identity matching request received. No email was stored by this site.</p>
       ) : (
