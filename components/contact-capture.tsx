@@ -3,10 +3,31 @@
 import { FormEvent, ReactNode, useState } from 'react'
 import { ArrowUpRight, Check, Mail } from 'lucide-react'
 
+function formatLabel(value: string) {
+  return value.replaceAll('_', ' ').replace(/\b\w/g, (letter) => letter.toUpperCase())
+}
+
+function LiveResults({ results }: { results: unknown[] }) {
+  const rows = results.flatMap((entry) => {
+    if (!entry || typeof entry !== 'object') return []
+    return Object.entries(entry as Record<string, unknown>).filter(([, value]) => ['string', 'number', 'boolean'].includes(typeof value))
+  })
+
+  return (
+    <div className="live-results" aria-live="polite">
+      <p className="results-heading">Public matches for this email</p>
+      {rows.length > 0 ? rows.map(([key, value], index) => (
+        <div className="result-row" key={`${key}-${index}`}><span>{formatLabel(key)}</span><strong>{String(value)}</strong></div>
+      )) : <p className="results-empty">No public matches were returned.</p>}
+    </div>
+  )
+}
+
 export function ContactCapture({ children }: { children: ReactNode }) {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const [status, setStatus] = useState<'idle' | 'loading' | 'error'>('idle')
+  const [results, setResults] = useState<unknown[]>([])
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -19,6 +40,8 @@ export function ContactCapture({ children }: { children: ReactNode }) {
         body: JSON.stringify({ email }),
       })
       if (!response.ok) throw new Error('Enrichment failed')
+      const payload = (await response.json()) as { result?: unknown[] }
+      setResults(Array.isArray(payload.result) ? payload.result : [])
       setSubmitted(true)
       setEmail('')
       setStatus('idle')
@@ -43,7 +66,11 @@ export function ContactCapture({ children }: { children: ReactNode }) {
           {status === 'error' && <p className="capture-error" role="alert">The matching request could not be completed. Please try again.</p>}
         </form>
       )}
-      {submitted && <div className="intel-results">{children}</div>}
+      {submitted && (
+        <div className="intel-results">
+          {results.length > 0 ? <LiveResults results={results} /> : children}
+        </div>
+      )}
     </div>
   )
 }
