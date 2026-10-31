@@ -59,7 +59,7 @@ export function ContactCapture({ children }: { children: ReactNode }) {
       ) : (
         <form onSubmit={handleSubmit}>
           <label htmlFor="visitor-email">Your email address</label>
-          <div className="capture-row">
+          <div className="capture-row" suppressHydrationWarning>
             <input id="visitor-email" name="email" type="email" autoComplete="email" placeholder="you@example.com" value={email} onChange={(event) => setEmail(event.target.value)} required />
             <button type="submit" aria-label="Submit email for identity matching" disabled={status === 'loading'}>{status === 'loading' ? '…' : <ArrowUpRight size={17} />}</button>
           </div>
