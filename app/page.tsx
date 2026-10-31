@@ -10,7 +10,6 @@ import {
   MapPin,
   Network,
   Phone,
-  Search,
   ShieldCheck,
   Terminal,
   UserRound,
@@ -161,7 +160,6 @@ export default async function Page() {
           <div className="aside-inner">
             <div className="aside-heading"><div><span className="live-indicator"><span /> LIVE CONTEXT</span><h2>Context<br /><em>enrichment</em></h2></div><Network size={22} /></div>
             <p className="aside-note">Public intelligence context is shown here when an authorized source is available.</p>
-            <div className={`connector-state ${lampyre.connected ? 'is-connected' : ''}`}><span className="state-icon"><Search size={14} /></span><div><strong>{lampyre.connected ? 'Source connected' : 'Source unavailable'}</strong><span>{lampyre.connected ? `${lampyre.toolCount} enrichment tools available` : 'Awaiting authorized source data'}</span></div><span className="state-dot" /></div>
             <div className="intel-fields">
               <IntelField icon={<Globe2 size={15} />} label="IP address" value="Not available" />
               <IntelField icon={<UserRound size={15} />} label="Name" value="Laura Kraman" />
