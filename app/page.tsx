@@ -172,7 +172,7 @@ export default async function Page() {
                 <IntelField icon={<Globe2 size={15} />} label="Website / social" value="linkedin.com/in/laurakraman" link="https://linkedin.com/in/laurakraman" />
               </div>
             </ContactCapture>
-            <div className="aside-footnote"><span className="lock-mark">⌁</span><span>Only public, user-authorized details should appear here. No IP address or external profiles are invented. The source and authorization key remain server-side.</span></div>
+            <div className="aside-footnote"><span className="lock-mark">⌁</span><span>Only public, user-authorized details should appear here.</span></div>
           </div>
         </aside>
       </div>
