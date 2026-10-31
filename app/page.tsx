@@ -38,7 +38,7 @@ const projects = [
     title: 'Phishing Scenario & Lab',
     tag: 'Vulnerability assessment',
     description:
-      'A research write-up on a layered phishing attack combining spear phishing, pretexting, voice phishing, and a counterfeit login portal—plus the verification processes and phishing-resistant controls that disrupt it.',
+      'A research write-up on spear phishing, pretexting, voice phishing, and a counterfeit login portal, including verification processes and phishing-resistant controls.',
     tools: ['OSINT', 'Social engineering', 'FIDO2 / passkeys'],
     link: 'https://blobs.vusercontent.net/blob/Phishing%20Scenerio%20and%20lab.docx-VO6l77vj3gWv7afYiDLpFzBXnTkn0E.pdf',
   },
@@ -50,16 +50,26 @@ const projects = [
       'Built and maintain a personal Kali Linux lab for reconnaissance, network scanning and mapping with Nmap, and web application testing with Burp Suite.',
     tools: ['Kali Linux', 'Nmap', 'Burp Suite'],
   },
+  {
+    number: '05',
+    title: 'TryHackMe Security Training',
+    tag: 'Hands-on training',
+    description:
+      'Earned badges across Metasploit, OWASP Top 10, Pentesting Principles, Burp Suite, Linux, and Security Awareness modules.',
+    tools: ['Metasploit', 'OWASP Top 10', 'Linux'],
+  },
 ]
 
 const skills = [
-  'Reconnaissance & OSINT',
-  'Network mapping & scanning',
-  'Web application testing',
+  'Penetration testing & vulnerability assessment',
+  'Reconnaissance, OSINT & SOCMINT',
+  'Nmap, Burp Suite & Metasploit',
+  'Network security & IDS/IPS coursework',
   'Threat actor profiling',
   'IOC / IOA analysis',
+  'MITRE ATT&CK & Cyber Kill Chain',
   'Python & data analysis',
-  'MITRE ATT&CK',
+  'Maltego, Shodan & VirusTotal',
   'AI search vulnerabilities',
 ]
 
@@ -123,7 +133,7 @@ export default async function Page() {
           <section className="work-section" id="work">
             <div className="section-heading-row">
               <div><SectionLabel>Selected work</SectionLabel><h2>Research in practice.</h2></div>
-              <span className="section-count">04 / 04</span>
+              <span className="section-count">05 / 05</span>
             </div>
             <div className="project-list">
               {projects.map((project) => (
@@ -140,12 +150,19 @@ export default async function Page() {
             </div>
           </section>
 
+          <section className="skills-section">
+            <div><SectionLabel>Technical focus</SectionLabel></div>
+            <div className="skills-grid">{skills.map((skill) => <span key={skill}>{skill}</span>)}</div>
+          </section>
+
           <section className="experience-section">
             <div><SectionLabel>Now / before</SectionLabel></div>
             <div className="timeline">
               <div className="timeline-item current"><span className="timeline-year">2022—now</span><div><h3>Deloitte US <small>Search & AI Strategist</small></h3><p>Advising C-suite and senior leadership while leading enterprise search and AI methodology. Managed a major website migration that delivered 10% organic traffic growth in the first 30 days.</p></div></div>
               <div className="timeline-item"><span className="timeline-year">2020—2022</span><div><h3>Quartz Network <small>SEO Specialist</small></h3><p>Validated data integrity across API and database migration projects, partnered with developers, and turned public-source research into stakeholder recommendations.</p></div></div>
-              <div className="timeline-item"><span className="timeline-year">2018—2020</span><div><h3>Web development <small>MSquared · Whittens</small></h3><p>Built web applications and improved organic traffic by 350% through technical optimization and information architecture.</p></div></div>
+              <div className="timeline-item"><span className="timeline-year">2018—2020</span><div><h3>Web development <small>MSquared · Whittens</small></h3><p>Built web applications, analyzed performance data, and improved organic traffic by 350% through technical optimization and information architecture.</p></div></div>
+              <div className="timeline-item"><span className="timeline-year">2017—2018</span><div><h3>Law Offices of Amanda Brinton <small>Paralegal / Document Review</small></h3><p>Conducted document analysis and indexing, supported discovery, and delivered research-driven recommendations.</p></div></div>
+              <div className="timeline-item"><span className="timeline-year">2009—2017</span><div><h3>E-volve Fitness <small>Founder & Owner</small></h3><p>Founded and grew a mobile fitness business into a brick-and-mortar studio, managing staff, finances, client relationships, and daily operations.</p></div></div>
             </div>
           </section>
 
