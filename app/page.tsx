@@ -1,5 +1,4 @@
 import { ContactCapture } from '@/components/contact-capture'
-import { getLampyreContext } from '@/lib/lampyre'
 import {
   ArrowUpRight,
   AtSign,
@@ -68,9 +67,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   )
 }
 
-export default async function Page() {
-  const lampyre = await getLampyreContext()
-
+export default function Page() {
   return (
     <main className="site-shell">
       <div className="ambient-grid" aria-hidden="true" />
