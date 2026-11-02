@@ -87,7 +87,7 @@ export default function Page() {
               Laura Kraman is a cyber threat intelligence candidate who spent seven years learning how the open web is built, indexed, and searched, and now uses that knowledge to collect, verify, and analyze it.
             </p>
             <div className="hero-actions">
-              <a className="primary-action" href="/laura-kraman-resume.pdf" target="_blank" rel="noreferrer">Download résumé <ArrowUpRight size={16} /></a>
+              <a className="primary-action" href="https://docs.google.com/document/d/1mmUgLa4OHWT_qV2em1KatseaJcj9sxFr/edit?usp=sharing&ouid=102398765191011653219&rtpof=true&sd=true" target="_blank" rel="noreferrer">Download résumé <ArrowUpRight size={16} /></a>
               <a className="text-action" href="#work">View casework <ChevronRight size={15} /></a>
             </div>
             <div className="hero-meta">
@@ -175,7 +175,7 @@ export default function Page() {
             <div className="contact-actions">
               <a className="email-link" href="mailto:Laurakraman01@gmail.com">Email me <ArrowUpRight size={20} /></a>
               <a className="contact-link" href="https://linkedin.com/in/laurakraman" target="_blank" rel="noreferrer">LinkedIn <ExternalLink size={13} /></a>
-              <a className="contact-link" href="/laura-kraman-resume.pdf" target="_blank" rel="noreferrer">Résumé (PDF) <ExternalLink size={13} /></a>
+              <a className="contact-link" href="https://docs.google.com/document/d/1mmUgLa4OHWT_qV2em1KatseaJcj9sxFr/edit?usp=sharing&ouid=102398765191011653219&rtpof=true&sd=true" target="_blank" rel="noreferrer">Résumé (PDF) <ExternalLink size={13} /></a>
             </div>
             <div className="contact-footer"><span>© 2026 Laura Kraman</span><a href="https://linkedin.com/in/laurakraman" target="_blank" rel="noreferrer">LinkedIn <ExternalLink size={13} /></a></div>
           </section>
