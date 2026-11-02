@@ -13,40 +13,40 @@ const projects = [
     title: 'APT38 Threat Assessment',
     tag: 'MS coursework',
     description:
-      'Analyzed two North Korean APT38 campaigns against financial targets using the Cyber Kill Chain and MITRE ATT&CK. Identified defanged IOCs, five priority IOAs, and modeled a 55.6% relative risk reduction from recommended controls.',
-    tools: ['MITRE ATT&CK', 'Python', 'Risk modeling'],
+      'Assessed two DPRK state-sponsored APT38 campaigns targeting the financial sector, structured with the Cyber Kill Chain and MITRE ATT&CK. Extracted and defanged IOCs, identified five priority IOAs, and modeled a 55.6% relative risk reduction from recommended controls.',
+    tools: ['MITRE ATT&CK', 'IOC / IOA analysis', 'Risk modeling'],
   },
   {
     number: '02',
-    title: 'Adversary Mapping Briefing',
+    title: 'Adversary Profiling Brief',
     tag: 'MS coursework',
     description:
-      'Mapped 20 techniques across Scattered Spider and APT29, translating tradecraft into executive threat profiles, business impact statements, and mitigation priorities.',
-    tools: ['Threat intelligence', 'ATT&CK', 'Executive briefing'],
+      'Mapped 20 techniques across Scattered Spider and APT29 and produced executive threat profiles: who they are, how they operate, what they\'d cost the business, and which mitigations matter first.',
+    tools: ['Threat actor profiling', 'ATT&CK', 'Executive briefing'],
   },
   {
     number: '03',
     title: 'Phishing Scenario & Lab',
     tag: 'Vulnerability assessment',
     description:
-      'A research write-up on spear phishing, pretexting, voice phishing, and a counterfeit login portal, including verification processes and phishing-resistant controls.',
-    tools: ['OSINT', 'Social engineering', 'FIDO2 / passkeys'],
-    link: 'https://blobs.vusercontent.net/blob/Phishing%20Scenerio%20and%20lab.docx-VO6l77vj3gWv7afYiDLpFzBXnTkn0E.pdf',
+      'Research on the pretext lifecycle: spear phishing, vishing, pretexting, and a counterfeit login portal. Shows how attackers use open-source reconnaissance to build credible lures, and the verification steps and phishing-resistant controls that defeat them.',
+    tools: ['OSINT reconnaissance', 'Social engineering', 'FIDO2 / passkeys'],
+    link: '/phishing-scenario-and-lab.pdf',
   },
   {
     number: '04',
-    title: 'Kali Linux Home Lab',
+    title: 'Reconnaissance Lab',
     tag: 'Hands-on lab',
     description:
-      'Built and maintain a personal Kali Linux lab for reconnaissance, network scanning and mapping with Nmap, and web application testing with Burp Suite.',
+      'Built and maintain a Kali Linux lab for active and passive reconnaissance: network discovery and mapping with Nmap, and web application testing with Burp Suite.',
     tools: ['Kali Linux', 'Nmap', 'Burp Suite'],
   },
   {
     number: '05',
-    title: 'TryHackMe Security Training',
+    title: 'TryHackMe Training',
     tag: 'Hands-on training',
     description:
-      'Earned badges across Metasploit, OWASP Top 10, Pentesting Principles, Burp Suite, Linux, and Security Awareness modules.',
+      'Completed modules across Metasploit, OWASP Top 10, Pentesting Principles, Burp Suite, Linux, and Security Awareness, building an understanding of the attacker\'s side of the problem.',
     tools: ['Metasploit', 'OWASP Top 10', 'Linux'],
   },
 ]
@@ -68,12 +68,12 @@ export default function Page() {
           LK<span>.</span>
         </a>
         <nav aria-label="Main navigation">
-          <a href="#work">Selected work</a>
-          <a href="#experience">Experience</a>
+          <a href="#work">Casework</a>
+          <a href="#experience">Track record</a>
           <a href="#contact">Contact</a>
         </nav>
         <a className="status-pill" href="mailto:Laurakraman01@gmail.com">
-          <span className="status-dot" /> Open to cyber internships
+          <span className="status-dot" /> Seeking CTI &amp; OSINT analyst roles, government and private sector
         </a>
       </header>
 
@@ -81,36 +81,65 @@ export default function Page() {
         <div className="main-column">
           <section className="hero-section">
             <p className="eyebrow"><span>01</span> Intelligence portfolio</p>
-            <h1>From SEO<br /><em>to intelligence.</em></h1>
+            <p className="hero-eyebrow">Cyber Threat Intelligence · OSINT · Reconnaissance</p>
+            <h1>From search<br /><em>to signal.</em></h1>
             <p className="hero-copy">
-              Laura Kraman is a cybersecurity candidate with a background in web systems, enterprise search, AI strategy, and open-source collection.
+              Laura Kraman is a cyber threat intelligence candidate who spent seven years learning how the open web is built, indexed, and searched, and now uses that knowledge to collect, verify, and analyze it.
             </p>
             <div className="hero-actions">
-              <a className="primary-action" href="#work">Explore the work <ArrowUpRight size={16} /></a>
-              <a className="text-action" href="mailto:Laurakraman01@gmail.com">Start a conversation <ChevronRight size={15} /></a>
+              <a className="primary-action" href="/laura-kraman-resume.pdf" target="_blank" rel="noreferrer">Download résumé <ArrowUpRight size={16} /></a>
+              <a className="text-action" href="#work">View casework <ChevronRight size={15} /></a>
             </div>
             <div className="hero-meta">
               <span><MapPin size={14} /> Wilmington, DE</span>
+              <span><ShieldCheck size={14} /> U.S. citizen · clearance-eligible</span>
+              <span><ShieldCheck size={14} /> Open to on-site, hybrid, or remote</span>
               <span><ShieldCheck size={14} /> MS Cybersecurity · 3.80 GPA</span>
-              <span><ShieldCheck size={14} /> Security+ certified</span>
               <span className="skill-tag">CompTIA Security+ (2026)</span>
             </div>
           </section>
 
-          <section className="intro-section" id="experience">
+          <section className="intro-section">
             <div>
               <SectionLabel>Profile</SectionLabel>
             </div>
             <div className="intro-copy">
-              <p className="lead-copy">I trace how information moves—from a public signal to a business decision.</p>
-              <p>My work sits at the intersection of technical systems and human context. After 7+ years building and troubleshooting web platforms, I now apply that same curiosity to reconnaissance, threat intelligence, and vulnerability assessment.</p>
-              <p>At Deloitte, I translate complex search and AI findings for senior leadership. In my graduate work, I translate adversary tradecraft into clear risk and mitigation priorities.</p>
+              <p className="lead-copy">I turn open-source signals into decisions.</p>
+              <p>I turn open-source signals into decisions, whether that decision is a mission priority or a security investment. I collect from the open web, evaluate what I find, and deliver finished analysis built for the reader: a threat assessment for an analyst, a bottom-line brief for an executive.</p>
+              <p>Years in search and web systems taught me how public information is created, indexed, and surfaced, which is the foundation of open-source collection. I now apply that to reconnaissance, adversary analysis, and vulnerability assessment.</p>
+              <p>At Deloitte, I brief senior leadership on complex findings, bottom line up front. In my graduate work, I take adversary tradecraft and turn it into assessed risk and prioritized mitigations.</p>
             </div>
+          </section>
+
+          <section className="bring-section">
+            <div><SectionLabel>What I bring</SectionLabel></div>
+            <div className="bring-grid">
+              <article><span>01</span><h3>Collection</h3><p>7+ years in how the open web is built, indexed, and searched.</p></article>
+              <article><span>02</span><h3>Analysis</h3><p>Adversary tradecraft mapped to MITRE ATT&amp;CK and the Cyber Kill Chain, with assessed risk and mitigations.</p></article>
+              <article><span>03</span><h3>Communication</h3><p>I brief C-suite leadership at Deloitte today, bottom line up front.</p></article>
+            </div>
+          </section>
+
+          <section className="process-section">
+            <SectionLabel>How I work</SectionLabel>
+            <h2>From question<br /><em>to decision.</em></h2>
+            <div className="process-grid">
+              <article><span>01</span><h3>Requirements</h3><p>Start with the question that matters to the decision-maker.</p></article>
+              <article><span>02</span><h3>Collection</h3><p>Gather from open sources efficiently, using years of experience in how the web is indexed and searched.</p></article>
+              <article><span>03</span><h3>Evaluation</h3><p>Weigh source reliability and corroborate before drawing conclusions.</p></article>
+              <article><span>04</span><h3>Analysis</h3><p>Map adversary behavior to ATT&amp;CK and the Kill Chain to assess intent, capability, and risk.</p></article>
+              <article><span>05</span><h3>Dissemination</h3><p>Deliver bottom line up front, from technical IOCs to C-suite briefings.</p></article>
+            </div>
+          </section>
+
+          <section className="skills-section">
+            <SectionLabel>Skills</SectionLabel>
+            <div className="skills-list">{['OSINT', 'Cyber threat intelligence', 'Intelligence cycle', 'Threat actor profiling', 'Nation-state & cybercrime actors', 'MITRE ATT&CK', 'Cyber Kill Chain', 'IOC / IOA analysis', 'Risk assessment', 'Reconnaissance', 'Nmap', 'Burp Suite', 'Kali Linux', 'Metasploit', 'Python', 'Executive briefing', 'CompTIA Security+'].map((skill) => <span key={skill}>{skill}</span>)}</div>
           </section>
 
           <section className="work-section" id="work">
             <div className="section-heading-row">
-              <div><SectionLabel>Selected work</SectionLabel><h2>Research in practice.</h2></div>
+              <div><SectionLabel>Casework</SectionLabel><h2>Analysis in practice.</h2></div>
               <span className="section-count">05 / 05</span>
             </div>
             <div className="project-list">
@@ -122,19 +151,19 @@ export default function Page() {
                     <p>{project.description}</p>
                     <div className="tool-row">{project.tools.map((tool) => <span key={tool}>{tool}</span>)}</div>
                   </div>
-                  {project.link ? <a className="project-link" href={project.link} target="_blank" rel="noreferrer" aria-label={`Read ${project.title}`}><ExternalLink size={17} /></a> : <div className="project-mark"><Terminal size={18} /></div>}
+                  {project.link ? <a className="project-link" href={project.link} target="_blank" rel="noreferrer" aria-label={`Read ${project.title}`}>Read the write-up <ExternalLink size={15} /></a> : <div className="project-mark"><Terminal size={18} /></div>}
                 </article>
               ))}
             </div>
           </section>
 
-          <section className="experience-section">
-            <div><SectionLabel>Now / before</SectionLabel></div>
+          <section className="experience-section" id="experience">
+            <div><SectionLabel>Track record</SectionLabel></div>
             <div className="timeline">
-              <div className="timeline-item current"><span className="timeline-year">2022—now</span><div><h3>Deloitte US <small>Search & AI Strategist</small></h3><p>Advising C-suite and senior leadership while leading enterprise search and AI methodology. Managed a major website migration that delivered 10% organic traffic growth in the first 30 days.</p></div></div>
+              <div className="timeline-item current"><span className="timeline-year">2022—now</span><div><h3>Deloitte US <small>Search & AI Strategist</small></h3><p>Briefs C-suite and senior leadership, turning complex search and AI findings into clear recommendations. Leads enterprise search and AI methodology. Ran a major website migration that delivered 10% organic traffic growth in the first 30 days.</p></div></div>
               <div className="timeline-item"><span className="timeline-year">2020—2022</span><div><h3>Quartz Network <small>SEO Specialist</small></h3><p>Validated data integrity across API and database migration projects, partnered with developers, and turned public-source research into stakeholder recommendations.</p></div></div>
               <div className="timeline-item"><span className="timeline-year">2018—2020</span><div><h3>Web development <small>MSquared · Whittens</small></h3><p>Built web applications, analyzed performance data, and improved organic traffic by 350% through technical optimization and information architecture.</p></div></div>
-              <div className="timeline-item"><span className="timeline-year">2017—2018</span><div><h3>Law Offices of Amanda Brinton <small>Paralegal / Document Review</small></h3><p>Conducted document analysis and indexing, supported discovery, and delivered research-driven recommendations.</p></div></div>
+              <div className="timeline-item"><span className="timeline-year">2017—2018</span><div><h3>Law Offices of Amanda Brinton <small>Paralegal / Document Review</small></h3><p>Reviewed, indexed, and analyzed case documents to evidentiary standards, supported discovery, and turned research into recommendations.</p></div></div>
               <div className="timeline-item"><span className="timeline-year">2009—2017</span><div><h3>E-volve Fitness <small>Founder & Owner</small></h3><p>Founded and grew a mobile fitness business into a brick-and-mortar studio, managing staff, finances, client relationships, and daily operations.</p></div></div>
             </div>
           </section>
@@ -142,7 +171,12 @@ export default function Page() {
           <section className="contact-section" id="contact">
             <SectionLabel>Get in touch</SectionLabel>
             <h2>Good intelligence<br /><em>starts with a question.</em></h2>
-            <a className="email-link" href="mailto:Laurakraman01@gmail.com">Laurakraman01@gmail.com <ArrowUpRight size={20} /></a>
+            <p className="contact-copy">If you&apos;re building a threat intelligence or OSINT capability, in an agency, a contractor, or a security team, I&apos;d like to hear what you&apos;re working on.</p>
+            <div className="contact-actions">
+              <a className="email-link" href="mailto:Laurakraman01@gmail.com">Email me <ArrowUpRight size={20} /></a>
+              <a className="contact-link" href="https://linkedin.com/in/laurakraman" target="_blank" rel="noreferrer">LinkedIn <ExternalLink size={13} /></a>
+              <a className="contact-link" href="/laura-kraman-resume.pdf" target="_blank" rel="noreferrer">Résumé (PDF) <ExternalLink size={13} /></a>
+            </div>
             <div className="contact-footer"><span>© 2026 Laura Kraman</span><a href="https://linkedin.com/in/laurakraman" target="_blank" rel="noreferrer">LinkedIn <ExternalLink size={13} /></a></div>
           </section>
         </div>

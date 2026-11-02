@@ -3,8 +3,8 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Laura Kraman — From SEO to Intelligence',
-  description: 'Cybersecurity portfolio of Laura Kraman: threat intelligence, reconnaissance, vulnerability assessment, and web systems.',
+  title: 'Laura Kraman — Cyber Threat Intelligence & OSINT Analyst',
+  description: 'Laura Kraman: cyber threat intelligence and OSINT analyst. Open-source collection, adversary analysis, reconnaissance, and decision-ready reporting.',
   generator: 'v0.app',
   icons: {
     icon: [
