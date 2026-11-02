@@ -92,6 +92,8 @@ export default function Page() {
             <div className="hero-meta">
               <span><MapPin size={14} /> Wilmington, DE</span>
               <span><ShieldCheck size={14} /> MS Cybersecurity · 3.80 GPA</span>
+              <span><ShieldCheck size={14} /> Security+ certified</span>
+              <span className="skill-tag">CompTIA Security+ (2026)</span>
             </div>
           </section>
 
