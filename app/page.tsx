@@ -31,7 +31,7 @@ const projects = [
     description:
       'Research on the pretext lifecycle: spear phishing, vishing, pretexting, and a counterfeit login portal. Shows how attackers use open-source reconnaissance to build credible lures, and the verification steps and phishing-resistant controls that defeat them.',
     tools: ['OSINT reconnaissance', 'Social engineering', 'FIDO2 / passkeys'],
-    link: '/phishing-scenario-and-lab.pdf',
+    link: 'https://docs.google.com/document/d/1JZv4BV1m5FsTku5iYn27qgOH2wgv43ZH/edit?usp=sharing&ouid=102398765191011653219&rtpof=true&sd=true',
   },
   {
     number: '04',
