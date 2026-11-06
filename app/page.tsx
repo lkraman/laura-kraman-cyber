@@ -31,7 +31,7 @@ const projects = [
     description:
       'Research on the pretext lifecycle: spear phishing, vishing, pretexting, and a counterfeit login portal. Shows how attackers use open-source reconnaissance to build credible lures, and the verification steps and phishing-resistant controls that defeat them.',
     tools: ['OSINT reconnaissance', 'Social engineering', 'FIDO2 / passkeys'],
-    link: 'https://github.com/lkraman/laura-kraman-cyber/blob/main/projects/vulnerability-assessment.pdf?raw=1',
+    link: 'https://raw.githubusercontent.com/lkraman/laura-kraman-cyber/main/projects/vulnerability-assessment.pdf',
   },
   {
     number: '04',
@@ -87,7 +87,7 @@ export default function Page() {
               Laura Kraman is a cyber threat intelligence candidate who spent seven years learning how the open web is built, indexed, and searched, and now uses that knowledge to collect, verify, and analyze it.
             </p>
             <div className="hero-actions">
-              <a className="primary-action" href="https://github.com/lkraman/laura-kraman-cyber/blob/main/projects/resume.pdf?raw=1" target="_blank" rel="noreferrer">Download résumé <ArrowUpRight size={16} /></a>
+              <a className="primary-action" href="https://raw.githubusercontent.com/lkraman/laura-kraman-cyber/main/projects/resume.pdf" target="_blank" rel="noreferrer">Download résumé <ArrowUpRight size={16} /></a>
               <a className="text-action" href="#work">View casework <ChevronRight size={15} /></a>
             </div>
             <div className="hero-meta">
@@ -175,7 +175,7 @@ export default function Page() {
             <div className="contact-actions">
               <a className="email-link" href="mailto:Laurakraman01@gmail.com">Email me <ArrowUpRight size={20} /></a>
               <a className="contact-link" href="https://linkedin.com/in/laurakraman" target="_blank" rel="noreferrer">LinkedIn <ExternalLink size={13} /></a>
-              <a className="contact-link" href="https://github.com/lkraman/laura-kraman-cyber/blob/main/projects/resume.pdf?raw=1" target="_blank" rel="noreferrer">Résumé (PDF) <ExternalLink size={13} /></a>
+              <a className="contact-link" href="https://raw.githubusercontent.com/lkraman/laura-kraman-cyber/main/projects/resume.pdf" target="_blank" rel="noreferrer">Résumé (PDF) <ExternalLink size={13} /></a>
             </div>
             <div className="contact-footer"><span>© 2026 Laura Kraman</span><a href="https://linkedin.com/in/laurakraman" target="_blank" rel="noreferrer">LinkedIn <ExternalLink size={13} /></a></div>
           </section>
