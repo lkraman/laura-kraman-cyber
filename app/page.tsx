@@ -31,7 +31,7 @@ const projects = [
     description:
       'Research on the pretext lifecycle: spear phishing, vishing, pretexting, and a counterfeit login portal. Shows how attackers use open-source reconnaissance to build credible lures, and the verification steps and phishing-resistant controls that defeat them.',
     tools: ['OSINT reconnaissance', 'Social engineering', 'FIDO2 / passkeys'],
-    link: 'https://raw.githubusercontent.com/lkraman/laura-kraman-cyber/main/projects/vulnerability-assessment.pdf',
+    link: 'https://github.com/lkraman/laura-kraman-cyber/blob/main/projects/vulnerability-assessment.pdf',
   },
   {
     number: '04',
