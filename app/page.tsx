@@ -90,6 +90,24 @@ export default function Page() {
               <a className="primary-action" href="https://github.com/lkraman/laura-kraman-cyber/blob/main/resume.pdf" target="_blank" rel="noreferrer">Download résumé <ArrowUpRight size={16} /></a>
               <a className="text-action" href="#work">View casework <ChevronRight size={15} /></a>
             </div>
+            <div className="hero-visual" aria-hidden="true">
+              <span className="graph-edge edge-one" />
+              <span className="graph-edge edge-two" />
+              <span className="graph-edge edge-three" />
+              <span className="graph-edge edge-four" />
+              <span className="graph-edge edge-five" />
+              <span className="graph-edge edge-six" />
+              <span className="graph-edge edge-seven" />
+              <span className="graph-edge edge-eight" />
+              <span className="graph-node node-one" />
+              <span className="graph-node node-two" />
+              <span className="graph-node node-three" />
+              <span className="graph-node node-four" />
+              <span className="graph-node node-five" />
+              <span className="graph-node node-six" />
+              <span className="graph-node node-seven" />
+              <span className="graph-node node-eight" />
+            </div>
             <div className="hero-meta">
               <span><MapPin size={14} /> Wilmington, DE</span>
               <span><ShieldCheck size={14} /> U.S. citizen · clearance-eligible</span>
