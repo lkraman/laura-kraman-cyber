@@ -96,12 +96,17 @@ export default function Page() {
               <span className="graph-edge edge-three" />
               <span className="graph-edge edge-four" />
               <span className="graph-edge edge-five" />
+              <span className="graph-edge edge-six" />
+              <span className="graph-edge edge-seven" />
+              <span className="graph-edge edge-eight" />
               <span className="graph-node node-one" />
               <span className="graph-node node-two" />
               <span className="graph-node node-three" />
               <span className="graph-node node-four" />
               <span className="graph-node node-five" />
               <span className="graph-node node-six" />
+              <span className="graph-node node-seven" />
+              <span className="graph-node node-eight" />
             </div>
             <div className="hero-meta">
               <span><MapPin size={14} /> Wilmington, DE</span>
