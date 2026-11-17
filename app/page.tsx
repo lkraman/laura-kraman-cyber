@@ -51,10 +51,10 @@ const projects = [
   },
   {
     number: '06',
-    title: 'SentinelScope AI',
-    tag: 'Cyber intelligence dashboard',
+    title: 'SentinelScope',
+    tag: 'Independent project',
     description:
-      'Built a cybersecurity intelligence dashboard for analyzing DNS logs, mapping infrastructure relationships, and documenting investigative findings. The demo uses a synthetic dataset for offline analysis; no live collection is performed.',
+      'A cybersecurity intelligence dashboard that analyzes DNS logs, maps infrastructure relationships, and documents investigative findings. The public demo uses a synthetic dataset for offline analysis; no live collection is performed.',
     tools: ['DNS log analysis', 'Infrastructure mapping', 'Investigative reporting'],
     link: 'https://sentinelscope-ai.vercel.app',
   },
@@ -178,7 +178,7 @@ export default function Page() {
                     <p>{project.description}</p>
                     <div className="tool-row">{project.tools.map((tool) => <span key={tool}>{tool}</span>)}</div>
                   </div>
-                  {project.link ? <a className="project-link" href={project.link} target="_blank" rel="noreferrer" aria-label={project.title === 'SentinelScope AI' ? 'Open SentinelScope AI dashboard' : `Read ${project.title}`}>{project.title === 'SentinelScope AI' ? 'Open dashboard' : 'Read the write-up'} <ExternalLink size={15} /></a> : <div className="project-mark"><Terminal size={18} /></div>}
+                  {project.link ? <a className="project-link" href={project.link} target="_blank" rel="noreferrer" aria-label={project.title === 'SentinelScope' ? 'Open SentinelScope dashboard' : `Read ${project.title}`}>{project.title === 'SentinelScope' ? 'Open dashboard' : 'Read the write-up'} <ExternalLink size={15} /></a> : <div className="project-mark"><Terminal size={18} /></div>}
                 </article>
               ))}
             </div>
