@@ -49,6 +49,15 @@ const projects = [
       'Completed modules across Metasploit, OWASP Top 10, Pentesting Principles, Burp Suite, Linux, and Security Awareness, building an understanding of the attacker\'s side of the problem.',
     tools: ['Metasploit', 'OWASP Top 10', 'Linux'],
   },
+  {
+    number: '06',
+    title: 'SentinelScope',
+    tag: 'Independent project',
+    description:
+      'A cybersecurity intelligence dashboard that analyzes DNS logs, maps infrastructure relationships, and documents investigative findings. The public demo uses a synthetic dataset for offline analysis; no live collection is performed.',
+    tools: ['DNS log analysis', 'Infrastructure mapping', 'Investigative reporting'],
+    link: 'https://sentinelscope-ai.vercel.app',
+  },
 ]
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
@@ -158,7 +167,7 @@ export default function Page() {
           <section className="work-section" id="work">
             <div className="section-heading-row">
               <div><SectionLabel>Casework</SectionLabel><h2>Analysis in practice.</h2></div>
-              <span className="section-count">05 / 05</span>
+              <span className="section-count">06 / 06</span>
             </div>
             <div className="project-list">
               {projects.map((project) => (
@@ -169,7 +178,7 @@ export default function Page() {
                     <p>{project.description}</p>
                     <div className="tool-row">{project.tools.map((tool) => <span key={tool}>{tool}</span>)}</div>
                   </div>
-                  {project.link ? <a className="project-link" href={project.link} target="_blank" rel="noreferrer" aria-label={`Read ${project.title}`}>Read the write-up <ExternalLink size={15} /></a> : <div className="project-mark"><Terminal size={18} /></div>}
+                  {project.link ? <a className="project-link" href={project.link} target="_blank" rel="noreferrer" aria-label={project.title === 'SentinelScope' ? 'Open SentinelScope dashboard' : `Read ${project.title}`}>{project.title === 'SentinelScope' ? 'Open dashboard' : 'Read the write-up'} <ExternalLink size={15} /></a> : <div className="project-mark"><Terminal size={18} /></div>}
                 </article>
               ))}
             </div>
